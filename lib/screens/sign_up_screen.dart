@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_app/widgets/default_button.dart';
 
-import '../components.dart';
+import '../widgets/default_form_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override

@@ -1,48 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_app/widgets/custom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white70,
         elevation: 0.0,
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
+        leading: const Padding(
+          padding: EdgeInsets.all(8.0),
           child: CircleAvatar(),
         ),
-        title: Center(
+        title: const Center(
           child: Text(
             "HOME",
             style: TextStyle(color: Colors.black),
           ),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Container(
-              height: 5,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Row(
-                  children: [
-                    Text(
-                      '40',
-                      style: TextStyle(color: Colors.amber),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Icon(
-                      Icons.circle,
-                      color: Colors.amber,
-                    ),
-                  ],
+          Container(
+            padding: const EdgeInsets.all(0),
+            child: Row(
+              children: const [
+                Text(
+                  '40',
+                  style: TextStyle(color: Colors.amber),
                 ),
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(20.0)),
+                SizedBox(
+                  width: 15,
+                ),
+                Icon(
+                  Icons.circle,
+                  color: Colors.amber,
+                ),
+              ],
+            ),
+            decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(25.0)
             ),
           ),
         ],
@@ -228,6 +225,9 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        unselectedLabelStyle: TextStyle(
+            color: Colors.black
+        ),
         items: [
           BottomNavigationBarItem(
             // activeIcon: Container(
