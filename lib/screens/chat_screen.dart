@@ -6,26 +6,6 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        leading: Icon(Icons.arrow_back, color: Colors.black),
-        title: Text(
-          "HENRY CHAPMAN",
-          style: TextStyle(
-            color: Colors.black,
-          ),
-        ),
-        actions: [
-          CircleAvatar(
-            child: Image(image: AssetImage("")),
-          ),
-          SizedBox(
-            width: 10,
-          )
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

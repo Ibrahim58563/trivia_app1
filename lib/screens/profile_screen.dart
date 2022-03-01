@@ -6,49 +6,6 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white70,
-        elevation: 0.0,
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(),
-        ),
-        title: Center(
-          child: Text(
-            "PROFILE",
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Container(
-              height: 5,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Row(
-                  children: [
-                    Text(
-                      '40',
-                      style: TextStyle(color: Colors.amber),
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Icon(
-                      Icons.circle,
-                      color: Colors.amber,
-                    ),
-                  ],
-                ),
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(20.0)),
-            ),
-          ),
-        ],
-      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -56,21 +13,40 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Image(image: AssetImage("")),
-                Container(
-                  height: 40,
-                  width: 80,
-                  child: Center(child: Text("Edit")),
-                  decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(20.0)),
-                ),
-                Text(
-                  "Lee Waters",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "San Diego, CA",
+                Image(image: AssetImage("lib/assets/Image.png")),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 60,
+                          child: Center(child: Text("Edit")),
+                          decoration: BoxDecoration(
+                              color: Colors.grey[300],
+                              borderRadius: BorderRadius.circular(20.0)),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 27,
+                    ),
+                    Text(
+                      "Lee Waters",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                    Text(
+                      "San Diego, CA",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -209,7 +185,8 @@ class ProfileScreen extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (context, index) => CircleAvatar(
                                   radius: 25,
-                                  backgroundImage: AssetImage(""),
+                                  backgroundImage:
+                                      AssetImage("lib/assets/Ovale.png"),
                                 ),
                             separatorBuilder: (context, index) => SizedBox(
                                   width: 20,
@@ -230,53 +207,71 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Center(
-              child: Column(
-                children: [
-                  Stack(
-                    children: [
-                      Image(
-                        image: AssetImage(""),
-                        height: 220,
-                        width: 375,
-                      ),
-                      Column(
+            Column(
+              children: [
+                Stack(
+                  children: [
+                    Image(
+                      image: AssetImage("lib/assets/Business.png"),
+                      height: 220,
+                      width: 375,
+                    ),
+                    Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             "Business",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 20,
                           ),
                           CircleAvatar(
                             backgroundColor: Colors.grey[300],
                             child: Text("30%"),
                           )
                         ],
-                      )
-                    ],
-                  ),
-                  Stack(
-                    children: [
-                      Image(
-                        image: AssetImage(""),
-                        height: 220,
-                        width: 375,
                       ),
-                      Column(
+                    )
+                  ],
+                ),
+                Stack(
+                  children: [
+                    Image(
+                      image: AssetImage("lib/assets/Flower.png"),
+                      height: 220,
+                      width: 375,
+                    ),
+                    Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Business",
-                            style: TextStyle(color: Colors.white),
+                            "Flower",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 20,
                           ),
                           CircleAvatar(
                             backgroundColor: Colors.grey[300],
                             child: Text("30%"),
                           )
                         ],
-                      )
-                    ],
-                  ),
-                ],
-              ),
+                      ),
+                    )
+                  ],
+                ),
+              ],
             ),
             Container(
               height: 220,
